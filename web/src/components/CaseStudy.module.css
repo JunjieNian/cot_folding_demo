@@ -1,0 +1,547 @@
+/* ─── CaseStudy.module.css ─── */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* ─── Header ─── */
+.header {
+  padding: 14px 20px 10px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.headerSub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.headerAccuracy {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: monospace;
+  color: var(--color-primary);
+}
+
+/* ─── Pair row (two columns) ─── */
+.pairRow {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  gap: 1px;
+  background: var(--color-border);
+}
+
+/* ─── Sample panel (each column) ─── */
+.samplePanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.samplePanel.correct {
+  border-left: 3px solid var(--color-success);
+}
+
+.samplePanel.incorrect {
+  border-left: 3px solid var(--color-error);
+}
+
+/* ─── Score card ─── */
+.scoreCard {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.scoreHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.scoreIcon {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.scoreIcon.correct {
+  color: var(--color-success);
+}
+
+.scoreIcon.incorrect {
+  color: var(--color-error);
+}
+
+.scoreSampleId {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.scoreNfs {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--color-primary);
+}
+
+.componentRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.componentBadge {
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--color-border-light);
+  color: var(--color-text-secondary);
+}
+
+/* ─── Minimap ─── */
+.minimap {
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  border-bottom: 1px solid var(--color-border-light);
+  cursor: pointer;
+}
+
+.minimapSlice {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Legend ─── */
+.legend {
+  display: flex;
+  gap: 10px;
+  padding: 4px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.legendSwatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── Text area ─── */
+.textArea {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  white-space: pre-wrap;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+/* ─── Slice spans ─── */
+.sliceSpan {
+  border-radius: 2px;
+  transition: outline 0.15s;
+  cursor: default;
+}
+
+.sliceSpan:hover {
+  outline: 1px solid var(--color-text-muted);
+  outline-offset: -1px;
+}
+
+.sliceActive {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: -1px;
+  animation: pulse-border 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { outline-color: var(--color-primary); }
+  50% { outline-color: transparent; }
+}
+
+/* ─── Return edges section ─── */
+.edgesSection {
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border-light);
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.edgesSectionTitle {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-faint);
+  padding: 6px 14px 4px;
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+}
+
+.edgeCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 14px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.edgeCard:hover {
+  background: var(--color-border-light);
+}
+
+.edgeCard.active {
+  background: var(--color-info-bg);
+}
+
+.edgeIndices {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 90px;
+}
+
+.edgeSim {
+  font-family: monospace;
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.edgeType {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  margin-left: auto;
+}
+
+/* ─── Empty / Fallback state ─── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+  padding: 40px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.emptyHint {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.suggestBtn {
+  padding: 6px 14px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.suggestBtn:hover {
+  opacity: 0.9;
+}
+
+/* ─── Loading ─── */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+/* ─── Graph row ─── */
+.graphRow {
+  display: flex;
+  gap: 1px;
+  background: var(--color-border);
+  flex-shrink: 0;
+  height: clamp(260px, 36vh, 400px);
+}
+
+/* ─── Shared legend ─── */
+.sharedLegend {
+  display: flex;
+  gap: 10px;
+  padding: 3px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  background: var(--color-surface);
+  font-size: 9px;
+  color: var(--color-text-muted);
+}
+
+/* ─── Compact score card ─── */
+.scoreCardCompact {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 5px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.scoreNfsCompact {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: monospace;
+  color: var(--color-primary);
+  margin-right: 4px;
+}
+
+/* ─── Return edges drawer ─── */
+.edgesDrawer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.edgesDrawerToggle {
+  width: 100%;
+  padding: 4px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-faint);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.edgesDrawerToggle:hover {
+  background: var(--color-border-light);
+}
+
+.edgesDrawerBody {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+/* ─── Graph stage (compare mode: shared single canvas) ─── */
+.graphStage {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: clamp(260px, 36vh, 400px);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.graphStageTabs {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+  background: var(--color-surface);
+}
+
+.graphStageTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-right: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: background 0.12s;
+  white-space: nowrap;
+}
+
+.graphStageTab:hover {
+  background: var(--color-border-light);
+}
+
+.graphStageTabCorrect {
+  color: var(--color-success);
+}
+
+.graphStageTabIncorrect {
+  color: var(--color-error);
+}
+
+.graphStageTabActive {
+  background: var(--color-bg) !important;
+  box-shadow: inset 0 -2px 0 0 currentColor;
+}
+
+.graphStageTabNfs {
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.graphStageTabSlices {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.55;
+}
+
+.graphStagePeekHint {
+  font-size: 9px;
+  color: var(--color-text-faint);
+  align-self: center;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.graphStageInspect {
+  align-self: center;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 2px 10px;
+  margin-right: 8px;
+  color: var(--color-text-secondary);
+  transition: background 0.1s;
+}
+
+.graphStageInspect:hover {
+  background: var(--color-border-light);
+}
+
+/* Peek overlay badge */
+.peekBadge {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 4px;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ─── Preset navigation bar ─── */
+.presetBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.presetLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+
+.presetBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.presetBtn:hover {
+  background: var(--color-border-light);
+  border-color: var(--color-text-muted);
+}
+
+.presetBtnActive {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.presetBtnActive:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.presetBtnSub {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .pairRow {
+    flex-direction: column;
+  }
+}

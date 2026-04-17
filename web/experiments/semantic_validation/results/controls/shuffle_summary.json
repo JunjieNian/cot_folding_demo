@@ -1,0 +1,22 @@
+{
+  "text": {
+    "observed_mean": 0.5704,
+    "observed_std": 0.0748,
+    "shuffled_mean": 0.0003,
+    "shuffled_std": 0.0061,
+    "mean_z": 40.73,
+    "median_z": 33.95,
+    "frac_p05": 1.0,
+    "n_samples": 1920
+  },
+  "structure": {
+    "observed_mean": 0.5704,
+    "observed_std": 0.0748,
+    "shuffled_mean": 0.0002,
+    "shuffled_std": 0.0062,
+    "mean_z": 40.67,
+    "median_z": 34.72,
+    "frac_p05": 1.0,
+    "n_samples": 1920
+  }
+}

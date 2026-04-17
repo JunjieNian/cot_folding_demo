@@ -1,0 +1,23 @@
+{
+  "explore-explore": {
+    "mean_rho": 0.5448100120135194,
+    "median_rho": 0.5386307457517183,
+    "std_rho": 0.06994341245510005,
+    "n_samples": 1920,
+    "frac_p05": 1.0
+  },
+  "exploit-exploit": {
+    "mean_rho": 0.5796995458639431,
+    "median_rho": 0.5847267692422558,
+    "std_rho": 0.08113363684120045,
+    "n_samples": 1919,
+    "frac_p05": 1.0
+  },
+  "cross-state": {
+    "mean_rho": 0.5452580844231781,
+    "median_rho": 0.5463102563399895,
+    "std_rho": 0.08094432964207231,
+    "n_samples": 1920,
+    "frac_p05": 1.0
+  }
+}

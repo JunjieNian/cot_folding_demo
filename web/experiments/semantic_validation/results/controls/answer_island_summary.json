@@ -1,0 +1,15 @@
+{
+  "n_samples": 1920,
+  "graph_detection_rate": 0.3604,
+  "hmm_detection_rate": 0.8615,
+  "graph_contains_answer_rate": 0.9682,
+  "hmm_contains_answer_rate": 0.98,
+  "graph_contains_answer_correct_rate": 0.9953,
+  "agreement_rate": 0.3625,
+  "mean_attachment": 0.0716,
+  "mean_cohesion": 0.1874,
+  "mean_detachment_gap": 0.1158,
+  "mean_tail_fraction": 0.0252,
+  "mean_graph_iou": 0.1775,
+  "mean_hmm_iou": 0.0978
+}

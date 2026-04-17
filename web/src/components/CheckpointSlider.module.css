@@ -1,0 +1,92 @@
+.wrapper {
+  margin-bottom: 10px;
+  padding: 6px 0;
+}
+
+.label {
+  font-size: var(--font-sm);
+  color: var(--color-text-faint);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.track {
+  position: relative;
+  height: 20px;
+  margin: 0 6px;
+  background: var(--color-border-light);
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0.2;
+  border-radius: 10px;
+  transition: width 0.2s ease;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.15s;
+  z-index: 1;
+}
+
+.dot:hover {
+  border-color: var(--color-primary);
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.dot.active {
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+.stepLabel {
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: var(--color-text-faint);
+  margin-top: 3px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.infoName {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.infoMetric {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  font-family: monospace;
+}

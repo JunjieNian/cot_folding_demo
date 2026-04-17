@@ -1,0 +1,249 @@
+.root {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.loading {
+  padding: 5px 16px;
+  background: var(--color-info-bg);
+  color: var(--color-primary);
+  font-size: var(--font-lg);
+}
+
+.error {
+  padding: 5px 16px;
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  font-size: var(--font-lg);
+}
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.arcContainer {
+  flex: 1;
+  padding: 6px;
+  min-height: 0;
+}
+
+.arcCell {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex: 1;
+  gap: 6px;
+  padding: 6px;
+  min-height: 0;
+  height: 100%;
+}
+
+.cell {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Inspect view: vertically stacked arc (70%) + phase strip (30%) */
+.inspectCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  padding: 6px;
+  gap: 4px;
+}
+
+.inspectArc {
+  flex: 7;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.inspectToolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 2px 0;
+  flex-shrink: 0;
+}
+
+.inspectPhase {
+  flex: 3;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.inspectSplit {
+  flex: 7;
+  display: flex;
+  gap: 4px;
+  min-height: 0;
+}
+
+.inspectSplitMain {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.inspectSplitInset {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(30, 30, 30, 0.92);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  z-index: 2000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  animation: toastIn 0.3s ease;
+  pointer-events: none;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: var(--font-xxl);
+}
+
+.textPanel {
+  width: var(--text-panel-width);
+  flex-shrink: 0;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.textPanelHeader {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--color-border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textPanelTitle {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.textPanelMeta {
+  font-weight: 400;
+  color: var(--color-text-faint);
+  font-size: var(--font-md);
+}
+
+.textPanelClose {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--color-text-faint);
+  line-height: 1;
+}
+
+.textPanelBody {
+  flex: 1;
+  overflow: auto;
+  padding: 10px 12px;
+  font-size: var(--font-lg);
+  line-height: 1.7;
+  font-family: system-ui, sans-serif;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.textBefore, .textAfter {
+  color: var(--color-text-muted);
+}
+
+.textHighlight {
+  background: var(--color-highlight);
+  color: var(--color-text);
+  border-radius: 2px;
+  padding: 1px 0;
+  box-shadow: 0 0 0 1px var(--color-highlight-border);
+}
+
+.textLoading {
+  color: var(--color-text-faint);
+  padding: 20px;
+  text-align: center;
+}
+
+.textError {
+  color: var(--color-error);
+  padding: 20px;
+  text-align: center;
+  font-size: var(--font-md);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .textPanel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+  }
+}

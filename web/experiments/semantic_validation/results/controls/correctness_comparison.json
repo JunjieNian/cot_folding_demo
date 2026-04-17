@@ -1,0 +1,9 @@
+{
+  "correct_mean": 0.5664620991318366,
+  "correct_std": 0.07276763733253924,
+  "correct_n": 1447,
+  "incorrect_mean": 0.5826112725824327,
+  "incorrect_std": 0.07961532719021376,
+  "incorrect_n": 473,
+  "mannwhitney_p": 3.5632733053299963e-06
+}

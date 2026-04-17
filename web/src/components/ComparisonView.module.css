@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  gap: 8px;
+  height: 100%;
+  padding: 6px;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.panelHeader {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--font-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panelContent {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.diffPanel {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 12px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  overflow-y: auto;
+}
+
+.diffRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: var(--font-md);
+}
+
+.diffLabel {
+  color: var(--color-text-muted);
+}
+
+.diffValue {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.diffPositive {
+  color: var(--color-success);
+}
+
+.diffNegative {
+  color: var(--color-error);
+}
+
+.sampleSelect {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+}

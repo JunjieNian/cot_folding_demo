@@ -1,0 +1,39 @@
+.panel {
+  padding: 12px 16px;
+  height: 100%;
+  overflow: auto;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+}
+
+.header {
+  font-weight: 700;
+  font-size: var(--font-xxl);
+  margin: 10px 0 4px;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: var(--font-xl);
+}
+
+.label {
+  color: var(--color-text-secondary);
+}
+
+.value {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: monospace;
+}
+
+.sub {
+  color: var(--color-text-faint);
+  font-size: var(--font-md);
+  padding-left: 8px;
+}

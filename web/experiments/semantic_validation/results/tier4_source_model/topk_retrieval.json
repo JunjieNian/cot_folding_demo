@@ -1,0 +1,11 @@
+{
+  "structural_mean": 0.6773873567581177,
+  "adjacent_mean": 0.5086950063705444,
+  "random_mean": 0.32614538073539734,
+  "structural_std": 0.14598658680915833,
+  "adjacent_std": 0.17586781084537506,
+  "random_std": 0.14145000278949738,
+  "wilcoxon_struct_vs_adj_p": 0.0,
+  "wilcoxon_struct_vs_rand_p": 0.0,
+  "n_queries": 883462
+}

@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\caption{Semantic Validation: Structure--Text Similarity Correlation}
+\label{tab:semantic_validation}
+\begin{tabular}{lcccc}
+\toprule
+Metric & Mean & Median & Std & Frac.\ $p<.05$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Per-sample Spearman $\rho$ (structure vs.\ text)}} \\
+TF-IDF cosine & 0.454 & 0.435 & 0.146 & 100.0% \\
+Embedding cosine & 0.570 & 0.567 & 0.075 & 100.0% \\
+Partial Spearman & 0.553 & 0.552 & 0.075 & 100.0% \\
+\midrule
+\multicolumn{5}{l}{\textit{Cross-encoder (sampled pairs)}} \\
+Spearman $\rho$ & \multicolumn{4}{c}{0.737 ($n$=5000, $p$=0.0e+00)} \\
+\midrule
+\multicolumn{5}{l}{\textit{Top-5 retrieval: mean text similarity}} \\
+Structural nearest & \multicolumn{4}{c}{0.6601} \\
+Sequential adjacent & \multicolumn{4}{c}{0.5450} \\
+Random baseline & \multicolumn{4}{c}{0.3567} \\
+\midrule
+\multicolumn{5}{l}{\textit{HMM state stratification (mean $\rho$)}} \\
+Explore--explore & 0.545 & 0.539 & 0.070 & 100.0% \\
+Exploit--exploit & 0.580 & 0.585 & 0.081 & 100.0% \\
+Cross-state & 0.545 & 0.546 & 0.081 & 100.0% \\
+\midrule
+\multicolumn{5}{l}{\textit{Correct vs.\ incorrect samples (embedding $\rho$)}} \\
+Correct ($n$=1447) & \multicolumn{4}{c}{0.566 $\pm$ 0.073} \\
+Incorrect ($n$=473) & \multicolumn{4}{c}{0.583 $\pm$ 0.080} \\
+Mann-Whitney $p$ & \multicolumn{4}{c}{3.56e-06} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,90 @@
+{
+  "dataset": "aime24",
+  "n_samples": 1920,
+  "tier1_tfidf": {
+    "mean_rho": 0.45421591202461736,
+    "median_rho": 0.4352097001330568,
+    "std_rho": 0.1457252741881597,
+    "frac_p05": 1.0
+  },
+  "tier2_embedding": {
+    "mean_rho": 0.5704405152996137,
+    "median_rho": 0.5669039458455352,
+    "std_rho": 0.07483724258877977,
+    "frac_p05": 1.0
+  },
+  "tier2_partial_spearman": {
+    "mean_rho": 0.553292851006114,
+    "median_rho": 0.5518319130429749,
+    "std_rho": 0.07502910942509584,
+    "frac_p05": 1.0
+  },
+  "tier3_crossencoder": {
+    "spearman_rho": 0.7370400233644504,
+    "p_value": 0.0,
+    "n_pairs": 5000
+  },
+  "topk_retrieval": {
+    "structural_mean": 0.6601226925849915,
+    "adjacent_mean": 0.545028030872345,
+    "random_mean": 0.35669922828674316,
+    "structural_std": 0.12707951664924622,
+    "adjacent_std": 0.13208037614822388,
+    "random_std": 0.11125922948122025,
+    "wilcoxon_struct_vs_adj_p": 0.0,
+    "wilcoxon_struct_vs_rand_p": 0.0,
+    "wilcoxon_adj_vs_rand_p": 0.0,
+    "n_queries": 883462
+  },
+  "hmm_state_analysis": {
+    "explore-explore": {
+      "mean_rho": 0.5448100120135194,
+      "median_rho": 0.5386307457517183,
+      "std_rho": 0.06994341245510005,
+      "n_samples": 1920,
+      "frac_p05": 1.0
+    },
+    "exploit-exploit": {
+      "mean_rho": 0.5796995458639431,
+      "median_rho": 0.5847267692422558,
+      "std_rho": 0.08113363684120045,
+      "n_samples": 1919,
+      "frac_p05": 1.0
+    },
+    "cross-state": {
+      "mean_rho": 0.5452580844231781,
+      "median_rho": 0.5463102563399895,
+      "std_rho": 0.08094432964207231,
+      "n_samples": 1920,
+      "frac_p05": 1.0
+    }
+  },
+  "correctness_comparison": {
+    "correct_mean": 0.5664620991318366,
+    "correct_std": 0.07276763733253924,
+    "correct_n": 1447,
+    "incorrect_mean": 0.5826112725824327,
+    "incorrect_std": 0.07961532719021376,
+    "incorrect_n": 473,
+    "mannwhitney_p": 3.5632733053299963e-06
+  },
+  "tier4_source_model": {
+    "mean_rho": 0.8267733204165193,
+    "median_rho": 0.829552737201477,
+    "std_rho": 0.04428460093595755,
+    "frac_p05": 1.0,
+    "method": "sparse cosine on DeepSeek-R1 neuron w_sum",
+    "note": "same-model supplementary (not independent validation)"
+  },
+  "tier4_topk_retrieval": {
+    "structural_mean": 0.6773873567581177,
+    "adjacent_mean": 0.5086950063705444,
+    "random_mean": 0.32614538073539734,
+    "structural_std": 0.14598658680915833,
+    "adjacent_std": 0.17586781084537506,
+    "random_std": 0.14145000278949738,
+    "wilcoxon_struct_vs_adj_p": 0.0,
+    "wilcoxon_struct_vs_rand_p": 0.0,
+    "n_queries": 883462
+  }
+}
