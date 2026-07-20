@@ -8,7 +8,7 @@
 
 ## Overview
 
-CoT Folding treats a Chain-of-Thought (CoT) reasoning trajectory as a 1D chain analogous to a protein sequence. By measuring pairwise similarity between token segments using **neuron activation patterns** (via NAD — Neuron Activation Decomposition), we reveal how the reasoning "folds" in activation space, forming compact cores, long-range return connections, and drifting branches.
+CoT Folding treats a Chain-of-Thought (CoT) reasoning trajectory as a 1D chain analogous to a protein sequence. Building on **NAD (Neuron Agreement Decoding)**, it measures pairwise similarity between token segments using sparse neuron activation patterns, revealing how reasoning "folds" in activation space into compact cores, long-range return connections, and drifting branches. See the [NAD paper](https://arxiv.org/abs/2510.26277) for the activation representation and decoding foundation.
 
 The framework introduces the **Native Fold Score (NFS)** — a fully unsupervised, parameter-free quality metric for CoT reasoning that requires no correctness labels.
 
@@ -319,7 +319,7 @@ cot_folding_demo/
 
 - Python 3.10+
 - NumPy, SciPy
-- [NAD (Neuron Activation Decomposition)](https://github.com/) core library for Jaccard distance computation
+- [NAD (Neuron Agreement Decoding)](https://arxiv.org/abs/2510.26277) activation representation and decoding foundation
 - Node.js 18+ (for the web frontend)
 
 ### Running the NFS Pipeline
